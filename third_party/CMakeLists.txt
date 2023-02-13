@@ -327,6 +327,7 @@ else()
 endif()
 
 # spdlog
+message(STATUS "what's spdlog_headers_for_ide? ${spdlog_headers_for_ide}")
 add_subdirectory(spdlog)
 set_property(TARGET spdlog_headers_for_ide PROPERTY FOLDER "ThirdParty")
 

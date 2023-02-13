@@ -11,7 +11,7 @@ set(FRAMEWORK_FILES
 
 set(COMMON_FILES
     # header files
-
+    ./common/logging.h
     #sources files
 )
 

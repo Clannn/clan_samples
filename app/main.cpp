@@ -5,6 +5,9 @@
 #include <windows.h>
 #include <stdexcept>
 #include <iostream>
+#include <common/logging.h>
+
+
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
@@ -17,9 +20,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 	freopen_s(&fp, "conout$", "w", stdout);
 	freopen_s(&fp, "conout$", "w", stderr);
 
-    std::cout<<"Hello world!"<<std::endl;
-
-
+    LOGI("Hello, world!");
 
     // Register the window class.
     const wchar_t CLASS_NAME[]  = L"Sample Window Class";
