@@ -59,7 +59,3 @@ public:
 private:
     static std::vector<TagID> m_tags;
 };
-
-// TODO: what does this mean?
-// template <typename... TAGS>
-// std::vector<TagID> Tag<TAGS...>::m_tags;

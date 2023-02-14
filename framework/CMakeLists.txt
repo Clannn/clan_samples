@@ -13,7 +13,10 @@ set(COMMON_FILES
     # header files
     ./common/logging.h
     ./common/tags.h
+    ./platform/parser.h
     #sources files
+    ./common/tags.cpp
+    ./platform/parser.cpp
 )
 
 set(GEOMETRY_FILES
