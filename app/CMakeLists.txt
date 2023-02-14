@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 project(clan_samples LANGUAGES C CXX)
 
-# add_subdirectory(plugins)
-# add_subdirectory(apps)
+add_subdirectory(plugins)
+add_subdirectory(apps)
 
 add_executable(${PROJECT_NAME} WIN32 main.cpp)
 
@@ -14,4 +14,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 target_link_libraries(${PROJECT_NAME} PRIVATE framework)
 
-message(STATUS "MSVC is true? ${MSVC}")
+# message(STATUS "MSVC is true? ${MSVC}")

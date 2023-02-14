@@ -12,6 +12,7 @@ set(FRAMEWORK_FILES
 set(COMMON_FILES
     # header files
     ./common/logging.h
+    ./common/tags.h
     #sources files
 )
 
@@ -166,8 +167,8 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     spdlog
     ctpl
     CLI11::CLI11
-    # apps
-    # plugins
+    apps
+    plugins
     glfw
 )
 
