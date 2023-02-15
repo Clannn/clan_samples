@@ -5,6 +5,8 @@
 #include <windows.h>
 #include <stdexcept>
 #include <iostream>
+#include <limits>
+
 #include <common/logging.h>
 
 

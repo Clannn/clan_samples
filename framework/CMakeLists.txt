@@ -13,10 +13,10 @@ set(COMMON_FILES
     # header files
     ./common/logging.h
     ./common/tags.h
-    ./platform/parser.h
+    ./common/strings.h
     #sources files
     ./common/tags.cpp
-    ./platform/parser.cpp
+    ./common/strings.cpp
 )
 
 set(GEOMETRY_FILES
@@ -77,9 +77,17 @@ set(CORE_FILES
 
 set(PLATFORM_FILES
     # Header Files
+    ./platform/parser.h
+    ./platform/parsers/help_formatter.h
+    ./platform/parsers/CLI11.h
+    ./platform/plugins/plugin.h
 
     # Source Files
-    
+    ./platform/parser.cpp
+    ./platform/plugins/plugin.cpp
+    ./platform/parsers/help_formatter.cpp
+    ./platform/parsers/CLI11.cpp
+
 )
 
 set(GLFW_FILES
@@ -128,11 +136,10 @@ set(PROJECT_FILES
     ${GRAPHING_FILES}
     ${GLFW_FILES}
     ${WINDOWS_FILES}
-    test.hpp
-    test.cpp
 )
 
-# add_definitions(-DNOMINMAX)
+# mask out the min/max macros from minwindef.h
+add_definitions(-DNOMINMAX)
 
 add_library(${PROJECT_NAME} STATIC ${PROJECT_FILES})
 
