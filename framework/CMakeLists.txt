@@ -5,9 +5,11 @@ project(framework LANGUAGES C CXX)
 set(FRAMEWORK_FILES
     # header files
     timer.h
+    debug_info.h
 
     #sources files
     timer.cpp
+    debug_info.cpp
 
 )
 
