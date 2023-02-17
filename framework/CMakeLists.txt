@@ -88,6 +88,7 @@ set(PLATFORM_FILES
     ./platform/parser.h
     ./platform/input_events.h
     ./platform/filesystem.h
+    ./platform/configuration.h
     ./platform/parsers/help_formatter.h
     ./platform/parsers/CLI11.h
     ./platform/plugins/plugin.h
@@ -95,6 +96,7 @@ set(PLATFORM_FILES
     # Source Files
     ./platform/parser.cpp
     ./platform/filesystem.cpp
+    ./platform/configuration.cpp
     ./platform/input_events.cpp
     ./platform/plugins/plugin.cpp
     ./platform/parsers/help_formatter.cpp
