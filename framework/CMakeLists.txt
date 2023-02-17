@@ -80,12 +80,14 @@ set(CORE_FILES
 set(PLATFORM_FILES
     # Header Files
     ./platform/parser.h
+    ./platform/input_events.h
     ./platform/parsers/help_formatter.h
     ./platform/parsers/CLI11.h
     ./platform/plugins/plugin.h
 
     # Source Files
     ./platform/parser.cpp
+    ./platform/input_events.cpp
     ./platform/plugins/plugin.cpp
     ./platform/parsers/help_formatter.cpp
     ./platform/parsers/CLI11.cpp
