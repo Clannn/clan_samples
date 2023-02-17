@@ -6,6 +6,8 @@
 #include <unordered_map>
 #include <vector>
 
+#include "platform/application.h"
+
 /*
  *
  *	Clan Samples currently has only one type of apps, "Samples". These apps work from the interface AppInfo.
@@ -15,13 +17,10 @@
  */
 
 
-//TODO: T = clan::Application
-
-using T = int;
 
 namespace apps
 {
-    using CreateFunc = std::function<std::unique_ptr<T>()>;
+    using CreateFunc = std::function<std::unique_ptr<clan::Application>()>;
 
      /**
      *  AppInfo - Used by Clan Samples to load a vkb::Applicaiton with the creation function (CreateFunc create).

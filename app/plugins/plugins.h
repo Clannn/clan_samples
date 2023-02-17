@@ -2,10 +2,9 @@
 
 #include <vector>
 
-//TODO: T = clan::Plugin
-using T = int;
+#include "platform/plugins/plugin.h"
 
 namespace plugins
 {
-    extern std::vector<T*> get_all();
+    extern std::vector<clan::Plugin*> get_all();
 }
