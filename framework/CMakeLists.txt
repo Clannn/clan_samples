@@ -14,10 +14,16 @@ set(FRAMEWORK_FILES
 set(COMMON_FILES
     # header files
     ./common/logging.h
+    ./common/helpers.h
+    ./common/error.h
     ./common/tags.h
     ./common/strings.h
+    ./common/glm_common.h
+    ./common/vk_common.h
     #sources files
+    ./common/error.cpp
     ./common/tags.cpp
+    ./common/vk_common.cpp
     ./common/strings.cpp
 )
 
@@ -81,12 +87,14 @@ set(PLATFORM_FILES
     # Header Files
     ./platform/parser.h
     ./platform/input_events.h
+    ./platform/filesystem.h
     ./platform/parsers/help_formatter.h
     ./platform/parsers/CLI11.h
     ./platform/plugins/plugin.h
 
     # Source Files
     ./platform/parser.cpp
+    ./platform/filesystem.cpp
     ./platform/input_events.cpp
     ./platform/plugins/plugin.cpp
     ./platform/parsers/help_formatter.cpp
