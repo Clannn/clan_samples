@@ -24,7 +24,11 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 	freopen_s(&fp, "conout$", "w", stderr);
 
     LOGI("Hello, world!");
-
+#ifdef VKB_VULKAN_DEBUG
+    LOGI("VKB_VULKAN_DEBUG ON");
+#endif
+    
+    VK_CHECK(volkInitialize());
     clan::Instance instance("Sample");
 
     // Register the window class.

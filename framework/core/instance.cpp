@@ -131,7 +131,6 @@ namespace clan
                        bool                                          headless,
                        uint32_t                                      api_version)
     {
-        VK_CHECK(volkInitialize());
         uint32_t instance_extension_count;
         VK_CHECK(vkEnumerateInstanceExtensionProperties(nullptr, &instance_extension_count, nullptr));
 	    std::vector<VkExtensionProperties> available_instance_extensions(instance_extension_count);
