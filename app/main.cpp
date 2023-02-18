@@ -25,7 +25,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 
     LOGI("Hello, world!");
 
-    // clan::Instance instance("Sample");
+    clan::Instance instance("Sample");
 
     // Register the window class.
     const wchar_t CLASS_NAME[]  = L"Sample Window Class";
