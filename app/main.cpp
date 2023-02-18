@@ -7,7 +7,8 @@
 #include <iostream>
 #include <limits>
 
-#include <common/logging.h>
+#include "common/logging.h"
+#include "core/instance.h"
 
 
 
@@ -23,6 +24,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 	freopen_s(&fp, "conout$", "w", stderr);
 
     LOGI("Hello, world!");
+
+    // clan::Instance instance("Sample");
 
     // Register the window class.
     const wchar_t CLASS_NAME[]  = L"Sample Window Class";

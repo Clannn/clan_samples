@@ -49,7 +49,7 @@ namespace clan
 		VkResult err = x;                                           \
 		if (err)                                                    \
 		{                                                           \
-			LOGE("Detected Vulkan error: {}", vkb::to_string(err)); \
+			LOGE("Detected Vulkan error: {}", clan::to_string(err)); \
 			abort();                                                \
 		}                                                           \
 	} while (0)

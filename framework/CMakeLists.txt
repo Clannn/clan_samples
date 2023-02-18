@@ -80,8 +80,12 @@ set(STATS_FILES
 
 set(CORE_FILES
     # Header Files
+    ./core/instance.h
+    ./core/physical_device.h
 
     # Source Files
+    ./core/instance.cpp
+    ./core/physical_device.cpp
     
 )
 
@@ -161,6 +165,13 @@ add_definitions(-DNOMINMAX)
 
 add_library(${PROJECT_NAME} STATIC ${PROJECT_FILES})
 
+if(${VKB_VULKAN_DEBUG})
+    target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_VULKAN_DEBUG)
+endif()
+
+if(${VKB_VALIDATION_LAYERS})
+    target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_VALIDATION_LAYERS)
+endif()
 # target_compile_options(${PROJECT_NAME} PUBLIC /MP)
 
 # message(STATUS "Warnings as Errors Enabled")
@@ -174,8 +185,7 @@ add_library(${PROJECT_NAME} STATIC ${PROJECT_FILES})
 #     target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_ENABLE_PORTABILITY)
 # endif()
 
-# TODO: target_include_directories
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC $<TARGET_PROPERTY:plugins,INCLUDE_DIRECTORIES> ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Link third party libraries
 target_link_libraries(${PROJECT_NAME} PUBLIC
