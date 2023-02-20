@@ -84,12 +84,14 @@ set(CORE_FILES
     ./core/physical_device.h
     ./core/swapchain.h
     ./core/queue.h
+    ./core/vulkan_resource.h
 
     # Source Files
     ./core/instance.cpp
     ./core/physical_device.cpp
     ./core/swapchain.cpp
     ./core/queue.cpp
+    ./core/vulkan_resource.cpp
     
 )
 
