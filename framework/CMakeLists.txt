@@ -85,6 +85,8 @@ set(CORE_FILES
     ./core/swapchain.h
     ./core/queue.h
     ./core/vulkan_resource.h
+    ./core/debug.h
+    ./core/image.h
 
     # Source Files
     ./core/instance.cpp
@@ -92,6 +94,8 @@ set(CORE_FILES
     ./core/swapchain.cpp
     ./core/queue.cpp
     ./core/vulkan_resource.cpp
+    ./core/debug.cpp
+    ./core/image.cpp
     
 )
 
