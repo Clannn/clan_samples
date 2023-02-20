@@ -82,10 +82,14 @@ set(CORE_FILES
     # Header Files
     ./core/instance.h
     ./core/physical_device.h
+    ./core/swapchain.h
+    ./core/queue.h
 
     # Source Files
     ./core/instance.cpp
     ./core/physical_device.cpp
+    ./core/swapchain.cpp
+    ./core/queue.cpp
     
 )
 
