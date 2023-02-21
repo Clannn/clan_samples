@@ -38,8 +38,10 @@ set(GEOMETRY_FILES
 
 set(RENDERING_FILES
     # Header Files
+    ./rendering/render_target.h
 
     # Source Files
+    ./rendering/render_target.cpp
     
 )
 
