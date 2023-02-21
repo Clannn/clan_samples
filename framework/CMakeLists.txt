@@ -91,6 +91,7 @@ set(CORE_FILES
     ./core/shader_module.h
     ./core/descriptor_set_layout.h
     ./core/descriptor_pool.h
+    ./core/descriptor_set.h
 
     # Source Files
     ./core/instance.cpp
@@ -104,6 +105,7 @@ set(CORE_FILES
     ./core/shader_module.cpp
     ./core/descriptor_set_layout.cpp
     ./core/descriptor_pool.cpp
+    ./core/descriptor_set.cpp
     
 )
 
