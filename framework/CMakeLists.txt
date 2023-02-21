@@ -87,6 +87,8 @@ set(CORE_FILES
     ./core/vulkan_resource.h
     ./core/debug.h
     ./core/image.h
+    ./core/image_view.h
+    ./core/shader_module.h
 
     # Source Files
     ./core/instance.cpp
@@ -96,6 +98,8 @@ set(CORE_FILES
     ./core/vulkan_resource.cpp
     ./core/debug.cpp
     ./core/image.cpp
+    ./core/image_view.cpp
+    ./core/shader_module.cpp
     
 )
 
