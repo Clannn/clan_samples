@@ -39,9 +39,11 @@ set(GEOMETRY_FILES
 set(RENDERING_FILES
     # Header Files
     ./rendering/render_target.h
+    ./rendering/pipeline_state.h
 
     # Source Files
     ./rendering/render_target.cpp
+    ./rendering/pipeline_state.cpp
     
 )
 
