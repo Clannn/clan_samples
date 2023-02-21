@@ -89,6 +89,8 @@ set(CORE_FILES
     ./core/image.h
     ./core/image_view.h
     ./core/shader_module.h
+    ./core/descriptor_set_layout.h
+    ./core/descriptor_pool.h
 
     # Source Files
     ./core/instance.cpp
@@ -100,6 +102,8 @@ set(CORE_FILES
     ./core/image.cpp
     ./core/image_view.cpp
     ./core/shader_module.cpp
+    ./core/descriptor_set_layout.cpp
+    ./core/descriptor_pool.cpp
     
 )
 
