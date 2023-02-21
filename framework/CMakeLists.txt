@@ -92,6 +92,7 @@ set(CORE_FILES
     ./core/descriptor_set_layout.h
     ./core/descriptor_pool.h
     ./core/descriptor_set.h
+    ./core/pipeline_layout.h
 
     # Source Files
     ./core/instance.cpp
@@ -106,6 +107,7 @@ set(CORE_FILES
     ./core/descriptor_set_layout.cpp
     ./core/descriptor_pool.cpp
     ./core/descriptor_set.cpp
+    ./core/pipeline_layout.cpp
     
 )
 

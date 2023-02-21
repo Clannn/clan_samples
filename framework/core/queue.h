@@ -43,10 +43,15 @@ namespace clan
 
     private:
         Device& device;
+
         VkQueue handle{VK_NULL_HANDLE};
+
         uint32_t family_index{0};
+
         uint32_t index{0};
+
         VkBool32 can_present{VK_FALSE};
+        
         VkQueueFamilyProperties properties{};
     };
 }   //namespace clan
