@@ -105,6 +105,7 @@ set(CORE_FILES
     ./core/buffer.h
     ./core/query_pool.h
     ./core/sampler.h
+    ./core/command_buffer.h
 
     # Source Files
     ./core/instance.cpp
@@ -126,6 +127,7 @@ set(CORE_FILES
     ./core/buffer.cpp
     ./core/query_pool.cpp
     ./core/sampler.cpp
+    ./core/command_buffer.cpp
     
 )
 
