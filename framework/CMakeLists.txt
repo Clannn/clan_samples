@@ -98,6 +98,8 @@ set(CORE_FILES
     ./core/descriptor_set.h
     ./core/pipeline_layout.h
     ./core/render_pass.h
+    ./core/pipeline.h
+    ./core/framebuffer.h
 
     # Source Files
     ./core/instance.cpp
@@ -114,6 +116,8 @@ set(CORE_FILES
     ./core/descriptor_set.cpp
     ./core/pipeline_layout.cpp
     ./core/render_pass.cpp
+    ./core/pipeline.cpp
+    ./core/framebuffer.cpp
     
 )
 
