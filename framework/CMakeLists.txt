@@ -6,10 +6,12 @@ set(FRAMEWORK_FILES
     # header files
     timer.h
     debug_info.h
+    resource_binding_state.h
 
     #sources files
     timer.cpp
     debug_info.cpp
+    resource_binding_state.cpp
 
 )
 
