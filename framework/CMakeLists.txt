@@ -10,6 +10,7 @@ set(FRAMEWORK_FILES
     fence_pool.h
     resource_record.h
     resource_replay.h
+    resource_cache.h
 
     #sources files
     timer.cpp
@@ -18,6 +19,7 @@ set(FRAMEWORK_FILES
     fence_pool.cpp
     resource_record.cpp
     resource_replay.cpp
+    resource_cache.cpp
 
 )
 
