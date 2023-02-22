@@ -7,11 +7,13 @@ set(FRAMEWORK_FILES
     timer.h
     debug_info.h
     resource_binding_state.h
+    fence_pool.h
 
     #sources files
     timer.cpp
     debug_info.cpp
     resource_binding_state.cpp
+    fence_pool.cpp
 
 )
 
@@ -106,6 +108,7 @@ set(CORE_FILES
     ./core/query_pool.h
     ./core/sampler.h
     ./core/command_buffer.h
+    ./core/command_pool.h
 
     # Source Files
     ./core/instance.cpp
@@ -128,6 +131,7 @@ set(CORE_FILES
     ./core/query_pool.cpp
     ./core/sampler.cpp
     ./core/command_buffer.cpp
+    ./core/command_pool.cpp
     
 )
 
