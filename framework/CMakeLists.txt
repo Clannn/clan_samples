@@ -100,6 +100,7 @@ set(CORE_FILES
     ./core/render_pass.h
     ./core/pipeline.h
     ./core/framebuffer.h
+    ./core/buffer.h
 
     # Source Files
     ./core/instance.cpp
@@ -118,6 +119,7 @@ set(CORE_FILES
     ./core/render_pass.cpp
     ./core/pipeline.cpp
     ./core/framebuffer.cpp
+    ./core/buffer.cpp
     
 )
 
