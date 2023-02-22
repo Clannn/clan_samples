@@ -101,6 +101,8 @@ set(CORE_FILES
     ./core/pipeline.h
     ./core/framebuffer.h
     ./core/buffer.h
+    ./core/query_pool.h
+    ./core/sampler.h
 
     # Source Files
     ./core/instance.cpp
@@ -120,6 +122,8 @@ set(CORE_FILES
     ./core/pipeline.cpp
     ./core/framebuffer.cpp
     ./core/buffer.cpp
+    ./core/query_pool.cpp
+    ./core/sampler.cpp
     
 )
 
