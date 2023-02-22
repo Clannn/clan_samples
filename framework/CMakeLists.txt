@@ -8,12 +8,16 @@ set(FRAMEWORK_FILES
     debug_info.h
     resource_binding_state.h
     fence_pool.h
+    resource_record.h
+    resource_replay.h
 
     #sources files
     timer.cpp
     debug_info.cpp
     resource_binding_state.cpp
     fence_pool.cpp
+    resource_record.cpp
+    resource_replay.cpp
 
 )
 
