@@ -52,7 +52,7 @@ namespace clan
         VkResult get_results(uint32_t            first_query,
                              uint32_t            num_queries,
                              size_t              result_bytes,
-                             uint8_t*            results,
+                             void*               results,
                              VkDeviceSize        stride,
                              VkQueryResultFlags  flags
         );
