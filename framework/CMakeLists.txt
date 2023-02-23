@@ -115,6 +115,7 @@ set(CORE_FILES
     ./core/sampler.h
     ./core/command_buffer.h
     ./core/command_pool.h
+    ./core/device.h
 
     # Source Files
     ./core/instance.cpp
@@ -138,6 +139,7 @@ set(CORE_FILES
     ./core/sampler.cpp
     ./core/command_buffer.cpp
     ./core/command_pool.cpp
+    ./core/device.cpp
     
 )
 
