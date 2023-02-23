@@ -33,7 +33,7 @@ namespace clan
     };
 
     // A bitsmask of qualifiers applied to a resource
-    enum class ShaderResourceQualifiers
+    enum ShaderResourceQualifiers : uint32_t
     {
         None          = 0,
         NonReadable   = 1,

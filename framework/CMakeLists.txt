@@ -11,6 +11,8 @@ set(FRAMEWORK_FILES
     resource_record.h
     resource_replay.h
     resource_cache.h
+    spirv_reflection.h
+    glsl_compiler.h
 
     #sources files
     timer.cpp
@@ -20,6 +22,8 @@ set(FRAMEWORK_FILES
     resource_record.cpp
     resource_replay.cpp
     resource_cache.cpp
+    spirv_reflection.cpp
+    glsl_compiler.cpp
 
 )
 
