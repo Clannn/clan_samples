@@ -76,7 +76,7 @@ namespace clan
          */
         void set_output_attachments(std::vector<uint32_t>& output);
 
-        const std::vector<uint32_t>& get_ouput_attachments() const;
+        const std::vector<uint32_t>& get_output_attachments() const;
 
         void set_layout(uint32_t attachment, VkImageLayout layout);
 
