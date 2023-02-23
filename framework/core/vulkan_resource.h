@@ -32,7 +32,7 @@ namespace clan
         VulkanResource& operator=(const VulkanResource&) = delete;
 
         VulkanResource(VulkanResource&& other) :
-            handle{other.handle}, device{other.handle}
+            handle{other.handle}, device{other.device}
         {
             set_debug_name(other.debug_name);
             other.handle = VK_NULL_HANDLE;

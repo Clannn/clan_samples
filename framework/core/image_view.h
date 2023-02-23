@@ -32,7 +32,7 @@ namespace clan
 
         VkFormat get_format() const;
 
-        VkImageSubresourceRange get_subsource_range() const;
+        VkImageSubresourceRange get_subresource_range() const;
 
         VkImageSubresourceLayers get_subresource_layers() const;
 
