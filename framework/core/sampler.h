@@ -16,10 +16,10 @@ namespace clan
     public:
         /**
          * @brief Creates a Vulkan Sampler
-         * @param device The device to use
+         * @param d The device to use
          * @param info Creation details
          */
-        Sampler(const Device& device, const VkSamplerCreateInfo& info);
+        Sampler(const Device& d, const VkSamplerCreateInfo& info);
 
         Sampler(Sampler&& other);
 
