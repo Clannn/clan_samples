@@ -36,6 +36,7 @@ set(COMMON_FILES
     ./common/strings.h
     ./common/glm_common.h
     ./common/vk_common.h
+    ./common/resource_caching.h
     #sources files
     ./common/error.cpp
     ./common/tags.cpp
