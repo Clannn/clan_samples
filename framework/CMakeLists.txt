@@ -13,6 +13,8 @@ set(FRAMEWORK_FILES
     resource_cache.h
     spirv_reflection.h
     glsl_compiler.h
+    buffer_pool.h
+    semaphore_pool.h
 
     #sources files
     timer.cpp
@@ -24,6 +26,8 @@ set(FRAMEWORK_FILES
     resource_cache.cpp
     spirv_reflection.cpp
     glsl_compiler.cpp
+    buffer_pool.cpp
+    semaphore_pool.cpp
 
 )
 
