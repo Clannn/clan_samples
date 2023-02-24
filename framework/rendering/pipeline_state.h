@@ -123,7 +123,7 @@ namespace clan
 
         bool is_dirty() const;
 
-        void clear_dirty() const;
+        void clear_dirty();
 
         template <typename T>
         void set_constant(uint32_t constant_id, const T& data);
