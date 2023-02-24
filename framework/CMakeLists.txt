@@ -59,10 +59,12 @@ set(RENDERING_FILES
     # Header Files
     ./rendering/render_target.h
     ./rendering/pipeline_state.h
+    ./rendering/render_frame.h
 
     # Source Files
     ./rendering/render_target.cpp
     ./rendering/pipeline_state.cpp
+    ./rendering/render_frame.cpp
     
 )
 
