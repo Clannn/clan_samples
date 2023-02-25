@@ -77,15 +77,21 @@ set(RENDERING_SUBPASSES_FILES
 
 set(SCENE_GRAPH_FILES
     # Header Files
+    ./scene_graph/component.h
+    ./scene_graph/node.h
 
     # Source Files
+    ./scene_graph/component.cpp
+    ./scene_graph/node.cpp
     
 )
 
 set(SCENE_GRAPH_COMPONENT_FILES
     # Header Files
+    ./scene_graph/components/transform.h
 
     # Source Files
+    ./scene_graph/components/transform.cpp
     
 )
 
