@@ -6,68 +6,70 @@
 #include <unordered_map>
 #include <vector>
 
-#include "scene_graph/components/transform.h"
+#include "components/transform.h"
 
 namespace clan
 {
-    class Component;
+    namespace sg{
+        class Component;
 
-    /**
-     * @brief A leaf of the tree structure which can have children and a single parent.
-     */
-    class Node
-    {
-    public:
-        Node(const size_t id, const std::string& name);
-
-        virtual ~Node() = default;
-
-        const size_t get_id() const;
-
-        const std::string& get_name() const;
-
-        Transform& get_transform()
+        /**
+         * @brief A leaf of the tree structure which can have children and a single parent.
+         */
+        class Node
         {
-            return transform;
-        }
+        public:
+            Node(const size_t id, const std::string& name);
 
-        void set_parent(Node& parent);
+            virtual ~Node() = default;
 
-        Node* get_parent() const;
+            const size_t get_id() const;
 
-        void add_child(Node& child);
+            const std::string& get_name() const;
 
-        const std::vector<Node*>& get_children() const;
+            Transform& get_transform()
+            {
+                return transform;
+            }
 
-        void set_component(Component& component);
+            void set_parent(Node& parent);
 
-        template <typename T>
-        inline T& get_component()
-        {
-            return dynamic_cast<T&>(get_component(typeid(T)));
-        }
+            Node* get_parent() const;
 
-        Component& get_component(const std::type_index index);
+            void add_child(Node& child);
 
-        template <typename T>
-        bool has_component()
-        {
-            return has_component(typeid(T));
-        }
+            const std::vector<Node*>& get_children() const;
 
-        bool has_component(const std::type_index index);
+            void set_component(Component& component);
 
-    private:
-        size_t id;
+            template <typename T>
+            inline T& get_component()
+            {
+                return dynamic_cast<T&>(get_component(typeid(T)));
+            }
 
-        std::string name;
+            Component& get_component(const std::type_index index);
 
-        Transform transform;
+            template <typename T>
+            bool has_component()
+            {
+                return has_component(typeid(T));
+            }
 
-        Node* parent{nullptr};
+            bool has_component(const std::type_index index);
 
-        std::vector<Node*> children;
+        private:
+            size_t id;
 
-        std::unordered_map<std::type_index, Component*> components;
-    };
+            std::string name;
+
+            Transform transform;
+
+            Node* parent{nullptr};
+
+            std::vector<Node*> children;
+
+            std::unordered_map<std::type_index, Component*> components;
+        };
+    }
 }

@@ -2,12 +2,14 @@
 
 namespace clan
 {
-    Component::Component(const std::string& name) :
-        name{name}
-    { }
+    namespace sg{
+        Component::Component(const std::string& name) :
+            name{name}
+        { }
 
-    const std::string& Component::get_name() const
-    {
-        return name;
+        const std::string& Component::get_name() const
+        {
+            return name;
+        }
     }
 }

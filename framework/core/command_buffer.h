@@ -256,7 +256,7 @@ namespace clan
 
         std::unordered_map<uint32_t, DescriptorSetLayout*> descriptor_set_layout_binding_state;
 
-        const uint32_t get_current_render_pass() const;
+        const RenderPassBinding& get_current_render_pass() const;
 
         const uint32_t get_current_subpass_index() const;
 

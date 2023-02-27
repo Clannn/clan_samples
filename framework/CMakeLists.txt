@@ -60,11 +60,15 @@ set(RENDERING_FILES
     ./rendering/render_target.h
     ./rendering/pipeline_state.h
     ./rendering/render_frame.h
+    ./rendering/render_context.h
+    ./rendering/subpass.h
 
     # Source Files
     ./rendering/render_target.cpp
     ./rendering/pipeline_state.cpp
     ./rendering/render_frame.cpp
+    ./rendering/render_context.cpp
+    ./rendering/subpass.cpp
     
 )
 
@@ -79,26 +83,46 @@ set(SCENE_GRAPH_FILES
     # Header Files
     ./scene_graph/component.h
     ./scene_graph/node.h
+    ./scene_graph/scene.h
+    ./scene_graph/script.h
 
     # Source Files
     ./scene_graph/component.cpp
     ./scene_graph/node.cpp
+    ./scene_graph/scene.cpp
+    ./scene_graph/script.cpp
     
 )
 
 set(SCENE_GRAPH_COMPONENT_FILES
     # Header Files
     ./scene_graph/components/transform.h
+    ./scene_graph/components/light.h
+    ./scene_graph/components/sampler.h
+    ./scene_graph/components/texture.h
+    ./scene_graph/components/sub_mesh.h
+    ./scene_graph/components/material.h
+    ./scene_graph/components/camera.h
+    ./scene_graph/components/perspective_camera.h
 
     # Source Files
     ./scene_graph/components/transform.cpp
+    ./scene_graph/components/light.cpp
+    ./scene_graph/components/sampler.cpp
+    ./scene_graph/components/texture.cpp
+    ./scene_graph/components/sub_mesh.cpp
+    ./scene_graph/components/material.cpp
+    ./scene_graph/components/camera.cpp
+    ./scene_graph/components/perspective_camera.cpp
     
 )
 
 set(SCENE_GRAPH_SCRIPTS_FILES
     # Header Files
+    scene_graph/scripts/free_camera.h
 
     # Source Files
+    scene_graph/scripts/free_camera.cpp
     
 )
 
