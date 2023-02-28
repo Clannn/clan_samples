@@ -132,7 +132,7 @@ namespace clan
                     min = Dynamic<T>::value;
                 }
 
-                return "current: " + vkb::to_string(Dynamic<T>::value) + " min: " + vkb::to_string(min) + " max: " + vkb::to_string(max);
+                return "current: " + clan::to_string(Dynamic<T>::value) + " min: " + clan::to_string(min) + " max: " + clan::to_string(max);
             }
         };
     }   //namespace field

@@ -40,7 +40,7 @@ namespace clan
             }
             m_running       = false;
             m_lapping       = false;
-            auto duration = std::chrono::duration<double, T>(Clock::now() - start_time);
+            auto duration = std::chrono::duration<double, T>(Clock::now() - m_start_time);
             m_start_time    = Clock::now();
             m_lap_time      = Clock::now();
 
@@ -73,7 +73,7 @@ namespace clan
         double tick()
         {
             auto now      = Clock::now();
-            auto duration = std::chrono::duration<double, T>(now - previous_tick);
+            auto duration = std::chrono::duration<double, T>(now - m_previous_tick);
             m_previous_tick = now;
             return duration.count();
         }

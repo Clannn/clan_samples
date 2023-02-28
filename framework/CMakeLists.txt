@@ -41,11 +41,14 @@ set(COMMON_FILES
     ./common/glm_common.h
     ./common/vk_common.h
     ./common/resource_caching.h
+    ./common/utils.h
     #sources files
     ./common/error.cpp
     ./common/tags.cpp
     ./common/vk_common.cpp
     ./common/strings.cpp
+    ./common/utils.cpp
+
 )
 
 set(GEOMETRY_FILES
@@ -192,9 +195,13 @@ set(PLATFORM_FILES
     ./platform/configuration.h
     ./platform/application.h
     ./platform/window.h
+    ./platform/platform.h
+    ./platform/glfw_window.h
+    ./platform/windows_platform.h
     ./platform/parsers/help_formatter.h
     ./platform/parsers/CLI11.h
     ./platform/plugins/plugin.h
+    ./platform/plugins/plugin_base.h
 
     # Source Files
     ./platform/parser.cpp
@@ -203,6 +210,9 @@ set(PLATFORM_FILES
     ./platform/input_events.cpp
     ./platform/window.cpp
     ./platform/application.cpp
+    ./platform/platform.cpp
+    ./platform/glfw_window.cpp
+    ./platform/windows_platform.cpp
     ./platform/plugins/plugin.cpp
     ./platform/parsers/help_formatter.cpp
     ./platform/parsers/CLI11.cpp

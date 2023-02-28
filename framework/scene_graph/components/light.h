@@ -36,7 +36,7 @@ namespace clan
             float outer_cone_angle{0.0f};
         };
 
-        class Light : Component
+        class Light : public Component
         {
         public:
             Light(const std::string& name);

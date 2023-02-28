@@ -2,9 +2,8 @@
 
 #include <spdlog/fmt/fmt.h>
 
-//TODO:
-// #include "core/shader_module.h"
-// #include "scene_graph/components/material.h"
+#include "core/shader_module.h"
+#include "scene_graph/components/material.h"
 
 namespace clan
 {
@@ -1112,54 +1111,54 @@ namespace clan
         }
         return "Unkown";
     }
-    //TODO:
-    // const std::string to_string(sg::AlphaMode mode)
-    // {
-    //     if (mode == sg::AlphaMode::Blend)
-    //     {
-    //         return "Blend";
-    //     }
-    //     else if (mode == sg::AlphaMode::Mask)
-    //     {
-    //         return "Mask";
-    //     }
-    //     else if (mode == sg::AlphaMode::Opaque)
-    //     {
-    //         return "Opaque";
-    //     }
-    //     return "Unkown";
-    // }
-    //TODO:
-    // const std::string to_string(ShaderResourceType type)
-    // {
-    //     switch (type)
-    //     {
-    //         case ShaderResourceType::Input:
-    //             return "Input";
-    //         case ShaderResourceType::InputAttachment:
-    //             return "InputAttachment";
-    //         case ShaderResourceType::Output:
-    //             return "Output";
-    //         case ShaderResourceType::Image:
-    //             return "Image";
-    //         case ShaderResourceType::ImageSampler:
-    //             return "ImageSampler";
-    //         case ShaderResourceType::ImageStorage:
-    //             return "ImageStorage";
-    //         case ShaderResourceType::Sampler:
-    //             return "Sampler";
-    //         case ShaderResourceType::BufferUniform:
-    //             return "BufferUniform";
-    //         case ShaderResourceType::BufferStorage:
-    //             return "BufferStorage";
-    //         case ShaderResourceType::PushConstant:
-    //             return "PushConstant";
-    //         case ShaderResourceType::SpecializationConstant:
-    //             return "SpecializationConstant";
-    //         default:
-    //             return "Unkown Type";
-    //     }
-    // }
+
+    const std::string to_string(sg::AlphaMode mode)
+    {
+        if (mode == sg::AlphaMode::Blend)
+        {
+            return "Blend";
+        }
+        else if (mode == sg::AlphaMode::Mask)
+        {
+            return "Mask";
+        }
+        else if (mode == sg::AlphaMode::Opaque)
+        {
+            return "Opaque";
+        }
+        return "Unkown";
+    }
+
+    const std::string to_string(ShaderResourceType type)
+    {
+        switch (type)
+        {
+            case ShaderResourceType::Input:
+                return "Input";
+            case ShaderResourceType::InputAttachment:
+                return "InputAttachment";
+            case ShaderResourceType::Output:
+                return "Output";
+            case ShaderResourceType::Image:
+                return "Image";
+            case ShaderResourceType::ImageSampler:
+                return "ImageSampler";
+            case ShaderResourceType::ImageStorage:
+                return "ImageStorage";
+            case ShaderResourceType::Sampler:
+                return "Sampler";
+            case ShaderResourceType::BufferUniform:
+                return "BufferUniform";
+            case ShaderResourceType::BufferStorage:
+                return "BufferStorage";
+            case ShaderResourceType::PushConstant:
+                return "PushConstant";
+            case ShaderResourceType::SpecializationConstant:
+                return "SpecializationConstant";
+            default:
+                return "Unkown Type";
+        }
+    }
 
 const std::string buffer_usage_to_string(VkBufferUsageFlags flags)
 {

@@ -87,8 +87,8 @@ namespace clan
      */
     sg::Node &add_free_camera(sg::Scene &scene, const std::string &node_name, VkExtent2D extent);
 
-    namespace graphs
-    {
-    bool generate_all(RenderContext &context, sg::Scene &scene);
-    }
+    // namespace graphs
+    // {
+    // bool generate_all(RenderContext &context, sg::Scene &scene);
+    // }
 }

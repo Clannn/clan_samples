@@ -55,16 +55,16 @@ namespace clan
         DebugInfo &get_debug_info();
 
     protected:
-        float m_fps{0.0f};
-        float m_frame_time{0.0f};        // In ms
+        float fps{0.0f};
+        float frame_time{0.0f};        // In ms
         
-        uint32_t m_frame_count{0};
-        uint32_t m_last_frame_count{0};
+        uint32_t frame_count{0};
+        uint32_t last_frame_count{0};
 
-        Platform* m_platform;
+        Platform* platform;
 
     private:
-        std::string m_name{};
+        std::string name{};
 
         //The debug infor of the app
         DebugInfo debug_info{};

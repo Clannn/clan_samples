@@ -24,7 +24,7 @@ namespace clan
     }
 
     CLI11CommandParser::CLI11CommandParser(const std::string &name, const std::string &description, const std::vector<std::string> &args) :
-    m_cli11{std::make_unique<CLI::App>(description, name)}, m_formatter{std::make_shared<HelpFormatter>()}
+        m_cli11{std::make_unique<CLI::App>(description, name)}, m_formatter{std::make_shared<HelpFormatter>()}
     {
         m_cli11->formatter(m_formatter);
 

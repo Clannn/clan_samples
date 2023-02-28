@@ -52,7 +52,7 @@ namespace clan
 
         struct Properties
         {
-            std::string titile    = "";
+            std::string title    = "";
             Mode        mode      = Mode::Default;
             bool        resizable = true;
             Vsync       vsync     = Vsync::Default;
