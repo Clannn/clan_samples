@@ -280,4 +280,16 @@ namespace clan
          */
         void flush_push_constants();
     };
+    
+    template <class T>
+    inline void CommandBuffer::set_specialization_constant(uint32_t constant_id, const T &data)
+    {
+        set_specialization_constant(constant_id, to_bytes(data));
+    }
+
+    template <>
+    inline void CommandBuffer::set_specialization_constant<bool>(std::uint32_t constant_id, const bool &data)
+    {
+        set_specialization_constant(constant_id, to_bytes(to_u32(data)));
+    }
 }

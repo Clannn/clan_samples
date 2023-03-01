@@ -16,7 +16,7 @@ namespace clan
     {
         namespace path
         {
-            enum class Type
+            enum Type
             {
                 //Relative paths
                 Assets,

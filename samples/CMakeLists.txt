@@ -30,6 +30,7 @@ endforeach()
 
 # Order of the sample ids
 set(ORDER_LIST
+    "hello_triangle"
     #API Samples
 
     #Extension Samples

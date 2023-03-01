@@ -50,7 +50,6 @@ set(COMMON_FILES
     ./common/utils.h
     #sources files
     ./common/error.cpp
-    ./common/tags.cpp
     ./common/vk_common.cpp
     ./common/strings.cpp
     ./common/utils.cpp

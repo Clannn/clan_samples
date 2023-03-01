@@ -68,7 +68,7 @@ namespace clan
     {
     public:
         Plugin(const std::string& name, const std::string& description):
-            m_name(name), m_description(description)
+            name(name), description(description)
         {}
 
         virtual ~Plugin() = default;
@@ -199,11 +199,11 @@ namespace clan
         Platform *platform = nullptr;
 
     private:
-        std::string m_name;
-        std::string m_description;
+        std::string name;
+        std::string description;
         
-        std::vector<Plugin*> m_exclusions;
-        std::vector<Plugin*> m_inclusions;
+        std::vector<Plugin*> exclusions;
+        std::vector<Plugin*> inclusions;
     };
 
 

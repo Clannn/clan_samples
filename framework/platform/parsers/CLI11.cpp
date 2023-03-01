@@ -118,6 +118,18 @@ namespace clan
         return false;
     }
 
+    std::vector<std::string> CLI11CommandParser::get_command_value(Command *command) const
+    {
+        auto it = m_options.find(command);
+
+        if (it == m_options.end())
+        {
+            return {};
+        }
+
+        return it->second->results();
+    }
+
     bool CLI11CommandParser::parse(const std::vector<Plugin *> &plugins)
     {
         // Generate all command groups
