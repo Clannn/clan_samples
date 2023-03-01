@@ -15,6 +15,7 @@ set(FRAMEWORK_FILES
     glsl_compiler.h
     buffer_pool.h
     semaphore_pool.h
+    gltf_loader.h
     gui.h
     clan_sample.h
 
@@ -30,6 +31,7 @@ set(FRAMEWORK_FILES
     glsl_compiler.cpp
     buffer_pool.cpp
     semaphore_pool.cpp
+    gltf_loader.cpp
     gui.cpp
     clan_sample.cpp
 
@@ -139,10 +141,12 @@ set(SCENE_GRAPH_COMPONENT_FILES
 set(SCENE_GRAPH_SCRIPTS_FILES
     # Header Files
     scene_graph/scripts/free_camera.h
+    scene_graph/scripts/animation.h
     scene_graph/scripts/node_animation.h
 
     # Source Files
     scene_graph/scripts/free_camera.cpp
+    scene_graph/scripts/animation.cpp
     scene_graph/scripts/node_animation.cpp
     
 )
