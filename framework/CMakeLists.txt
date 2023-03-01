@@ -15,6 +15,8 @@ set(FRAMEWORK_FILES
     glsl_compiler.h
     buffer_pool.h
     semaphore_pool.h
+    gui.h
+    clan_sample.h
 
     #sources files
     timer.cpp
@@ -28,6 +30,8 @@ set(FRAMEWORK_FILES
     glsl_compiler.cpp
     buffer_pool.cpp
     semaphore_pool.cpp
+    gui.cpp
+    clan_sample.cpp
 
 )
 
@@ -65,6 +69,7 @@ set(RENDERING_FILES
     ./rendering/render_frame.h
     ./rendering/render_context.h
     ./rendering/subpass.h
+    ./rendering/render_pipeline.h
 
     # Source Files
     ./rendering/render_target.cpp
@@ -72,6 +77,7 @@ set(RENDERING_FILES
     ./rendering/render_frame.cpp
     ./rendering/render_context.cpp
     ./rendering/subpass.cpp
+    ./rendering/render_pipeline.cpp
     
 )
 
@@ -107,6 +113,11 @@ set(SCENE_GRAPH_COMPONENT_FILES
     ./scene_graph/components/material.h
     ./scene_graph/components/camera.h
     ./scene_graph/components/perspective_camera.h
+    ./scene_graph/components/image.h
+    ./scene_graph/components/stb.h
+    ./scene_graph/components/pbr_material.h
+    ./scene_graph/components/aabb.h
+    ./scene_graph/components/mesh.h
 
     # Source Files
     ./scene_graph/components/transform.cpp
@@ -117,23 +128,39 @@ set(SCENE_GRAPH_COMPONENT_FILES
     ./scene_graph/components/material.cpp
     ./scene_graph/components/camera.cpp
     ./scene_graph/components/perspective_camera.cpp
-    
+    ./scene_graph/components/image.cpp
+    ./scene_graph/components/stb.cpp
+    ./scene_graph/components/pbr_material.cpp
+    ./scene_graph/components/aabb.cpp
+    ./scene_graph/components/mesh.cpp
+
 )
 
 set(SCENE_GRAPH_SCRIPTS_FILES
     # Header Files
     scene_graph/scripts/free_camera.h
+    scene_graph/scripts/node_animation.h
 
     # Source Files
     scene_graph/scripts/free_camera.cpp
+    scene_graph/scripts/node_animation.cpp
     
 )
 
 set(STATS_FILES
     # Header Files
+    stats/stats.h
+    stats/stats_common.h
+    stats/stats_provider.h
+    stats/frame_time_stats_provider.h
+    stats/vulkan_stats_provider.h
 
     # Source Files
-    
+    stats/stats.cpp
+    stats/stats_provider.cpp
+    stats/frame_time_stats_provider.cpp
+    stats/vulkan_stats_provider.cpp
+
 )
 
 set(CORE_FILES
