@@ -26,7 +26,7 @@ namespace plugins
             if (sample != nullptr)
             {
                 clan::Window::OptionalProperties properties;
-                std::string                     title = "Vulkan Samples: " + sample->name;
+                std::string                     title = "Clan Samples: " + sample->name;
                 properties.title                      = title;
                 platform->set_window_properties(properties);
                 platform->request_application(sample);

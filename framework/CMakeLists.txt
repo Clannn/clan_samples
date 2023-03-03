@@ -71,6 +71,8 @@ set(RENDERING_FILES
     ./rendering/render_context.h
     ./rendering/subpass.h
     ./rendering/render_pipeline.h
+    ./rendering/subpasses/forward_subpass.h
+    ./rendering/subpasses/geometry_subpass.h
 
     # Source Files
     ./rendering/render_target.cpp
@@ -79,6 +81,8 @@ set(RENDERING_FILES
     ./rendering/render_context.cpp
     ./rendering/subpass.cpp
     ./rendering/render_pipeline.cpp
+    ./rendering/subpasses/forward_subpass.cpp
+    ./rendering/subpasses/geometry_subpass.cpp
     
 )
 

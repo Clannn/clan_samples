@@ -13,7 +13,6 @@ namespace plugins
      * 
      * Usage: clan_sample sample afbc
      * 
-     * TODO: Could this be extended to allow configuring a sample from the command line? Currently options are set explicitly by the UI
      */
     class StartSample : public StartSampleTags
     {

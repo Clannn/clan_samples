@@ -13,7 +13,7 @@
 namespace clan
 {
     namespace sg{
-        enum class LightType
+        enum LightType
         {
             Directional = 0,
             Point       = 1,

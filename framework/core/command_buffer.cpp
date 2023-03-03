@@ -356,6 +356,12 @@ namespace clan
         vkCmdDrawIndexedIndirect(get_handle(), buffer.get_handle(), offset, draw_count, stride);
     }
 
+    void CommandBuffer::dispatch(uint32_t group_count_x, uint32_t group_count_y, uint32_t group_count_z)
+    {
+        flush(VK_PIPELINE_BIND_POINT_COMPUTE);
+        vkCmdDispatch(get_handle(), group_count_x, group_count_y, group_count_z);
+    }
+
     void CommandBuffer::dispatch_indirect(const Buffer &buffer, VkDeviceSize offset)
     {
         flush(VK_PIPELINE_BIND_POINT_COMPUTE);

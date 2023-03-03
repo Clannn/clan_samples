@@ -37,7 +37,7 @@ namespace clan
         spdlog::set_default_logger(logger);
         LOGI("Logger initialized");
 
-        parser = std::make_unique<CLI11CommandParser>("clan_samples", "\n\tVulkan Samples\n\n\t\tA collection of samples to demonstrate the Vulkan best practice.\n", arguments);
+        parser = std::make_unique<CLI11CommandParser>("clan_samples", "\n\tClan Samples\n\n\t\tA collection of samples to demonstrate the Vulkan best practice.\n", arguments);
         // Process command line arguments
         if (!parser->parse(associate_plugins(plugins))){
             return ExitCode::Help;
@@ -81,6 +81,7 @@ namespace clan
 					LOGE("Failed to load requested application");
 					return ExitCode::FatalError;
                 }
+                LOGI("Start APP  down!!!!!!!!!!!!!...........");
 
                 timer.tick();
                 active_app->update(simulation_frame_time);
@@ -114,8 +115,8 @@ namespace clan
         context->set_surface_format_priority(surface_format_priority);
         context->request_image_format(surface_format_priority[0].format);
         context->set_present_mode_priority({
-                VK_PRESENT_MODE_MAILBOX_KHR,
                 VK_PRESENT_MODE_FIFO_KHR,
+                VK_PRESENT_MODE_MAILBOX_KHR,
                 VK_PRESENT_MODE_IMMEDIATE_KHR,
             });
         switch (window_properties.vsync) {
@@ -272,13 +273,14 @@ namespace clan
         active_app = requested_app_info->create();
         active_app->set_name(requested_app_info->id);
         if (!active_app) {
-            LOGE("Failed to create a valid vulkan app.");
+            LOGE("Failed to create a valid clan app.");
             return false;
         }
         if (!active_app->prepare(*this)) {
-            LOGE("Failed to prepare vulkan app.");
+            LOGE("Failed to prepare clan app.");
             return false;
         }
+        LOGI("app prepare down................................");
 
         on_app_start(requested_app_info->id);
         return true;

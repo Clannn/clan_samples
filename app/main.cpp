@@ -10,8 +10,15 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR lpCmdLin
 
     auto code = platform.initialize(plugins::get_all());
 
+    LOGI("initialize  down!!!!..............")
+    int i = 0;
+
     if (code == clan::ExitCode::Success) {
         code = platform.main_loop();
+        if(i==0){
+            LOGI("done first loop..................");
+            i++;
+        }
     }
 
     platform.terminate(code);

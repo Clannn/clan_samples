@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 
-scan_dirs(
-    DIR ${CMAKE_CURRENT_SOURCE_DIR}
-    LIST SUB_DIRS)
+# scan_dirs(
+#     DIR ${CMAKE_CURRENT_SOURCE_DIR}
+#     LIST SUB_DIRS)
 
 # List of all samples
 set(TOTAL_SAMPLE_ID_LIST)
@@ -24,24 +24,17 @@ function(add_sub_dirs DIRECTORY)
     endforeach()
 endfunction(add_sub_dirs)
 
-foreach(SUB_DIR ${SUB_DIRS})
-    add_sub_dirs(${CMAKE_CURRENT_SOURCE_DIR}/${SUB_DIR})
-endforeach()
+add_sub_dirs(${CMAKE_CURRENT_SOURCE_DIR})
+
+# foreach(SUB_DIR ${SUB_DIRS})
+#     add_sub_dirs(${CMAKE_CURRENT_SOURCE_DIR}/${SUB_DIR})
+# endforeach()
 
 # Order of the sample ids
 set(ORDER_LIST
     "hello_triangle"
-    #API Samples
-
-    #Extension Samples
-
-    #Performance Samples
-
-    #Tooling samples
-
-    #HPP API Samples
-	
-    #HPP Performance Samples
+    "16bit"
+    "afbc"
 )
 
 # Orders the sample ids by the order list above
@@ -66,3 +59,5 @@ endforeach()
 
 # Make sample list visible parent scope (required by clan_samples project)
 set(TOTAL_SAMPLE_ID_LIST ${ORDERED_LIST} PARENT_SCOPE)
+
+message(STATUS "TOTAL_SAMPLE_ID_LIST:--------------------------${TOTAL_SAMPLE_ID_LIST}")

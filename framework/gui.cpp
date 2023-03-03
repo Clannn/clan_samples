@@ -101,6 +101,7 @@ namespace clan
         style.Colors[ImGuiCol_Button]           = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
         style.Colors[ImGuiCol_ButtonHovered]    = ImVec4(1.0f, 0.0f, 0.0f, 0.6f);
         style.Colors[ImGuiCol_ButtonActive]     = ImVec4(1.0f, 0.0f, 0.0f, 0.8f);
+        LOGI("create gui context  down......................");
 
         // Borderless window
         style.WindowBorderSize = 0.0f;
@@ -209,6 +210,7 @@ namespace clan
             device.get_fence_pool().reset();
             device.get_command_pool().reset_pool();
         }
+        LOGI("upload vulkan format down...........");
 
         // Create texture sampler
         VkSamplerCreateInfo sampler_info{VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO};

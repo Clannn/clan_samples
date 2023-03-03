@@ -9,24 +9,24 @@ set(SAMPLE_INCLUDE_FILES)
 set(SAMPLE_INFO_LIST)
 
 foreach(SAMPLE_ID ${TOTAL_SAMPLE_ID_LIST})
-    if ("${VKB_${SAMPLE_ID}}" AND TARGET ${SAMPLE_ID})
-        get_target_property(SAMPLE_CATEGORY ${SAMPLE_ID} SAMPLE_CATEGORY)
-        get_target_property(SAMPLE_AUTHOR ${SAMPLE_ID} SAMPLE_AUTHOR)
-        get_target_property(SAMPLE_NAME ${SAMPLE_ID} SAMPLE_NAME)
-        get_target_property(SAMPLE_DESCRIPTION ${SAMPLE_ID} SAMPLE_DESCRIPTION)
-        get_target_property(SAMPLE_TAGS ${SAMPLE_ID} SAMPLE_TAGS)
+    # if ("${SAMPLE_ID}" AND TARGET ${SAMPLE_ID})
+    get_target_property(SAMPLE_CATEGORY ${SAMPLE_ID} SAMPLE_CATEGORY)
+    get_target_property(SAMPLE_AUTHOR ${SAMPLE_ID} SAMPLE_AUTHOR)
+    get_target_property(SAMPLE_NAME ${SAMPLE_ID} SAMPLE_NAME)
+    get_target_property(SAMPLE_DESCRIPTION ${SAMPLE_ID} SAMPLE_DESCRIPTION)
+    get_target_property(SAMPLE_TAGS ${SAMPLE_ID} SAMPLE_TAGS)
 
-        # Ensure we send in an empty C++ string as the vendor category, rather than a string with a space
-        set(INCLUDE_DIR ${SAMPLE_CATEGORY}/${SAMPLE_ID})
+    # Ensure we send in an empty C++ string as the vendor category, rather than a string with a space
+    set(INCLUDE_DIR ${SAMPLE_ID})
 
-        set(SAMPLE_TAGS_VECTOR)
+    set(SAMPLE_TAGS_VECTOR)
 
-        list(JOIN SAMPLE_TAGS "\", \"" SAMPLE_TAGS_VECTOR)
+    list(JOIN SAMPLE_TAGS "\", \"" SAMPLE_TAGS_VECTOR)
 
-        list(APPEND SAMPLE_INCLUDE_FILES "#include \"${INCLUDE_DIR}/${SAMPLE_ID}.h\"")
-        list(APPEND SAMPLE_INFO_LIST "\tSampleInfo{\"${SAMPLE_ID}\", create_${SAMPLE_ID}, \"${SAMPLE_CATEGORY}\"\, \"${SAMPLE_AUTHOR}\"\, \"${SAMPLE_NAME}\"\, \"${SAMPLE_DESCRIPTION}\", {\"${SAMPLE_TAGS_VECTOR}\"}},")
-        list(APPEND APP_INFO_LIST "\tAppInfo{\"${SAMPLE_ID}\", create_${SAMPLE_ID}},")
-    endif()
+    list(APPEND SAMPLE_INCLUDE_FILES "#include \"${INCLUDE_DIR}/${SAMPLE_ID}.h\"")
+    list(APPEND SAMPLE_INFO_LIST "\tSampleInfo{\"${SAMPLE_ID}\", create_${SAMPLE_ID}, \"${SAMPLE_CATEGORY}\"\, \"${SAMPLE_AUTHOR}\"\, \"${SAMPLE_NAME}\"\, \"${SAMPLE_DESCRIPTION}\", {\"${SAMPLE_TAGS_VECTOR}\"}},")
+    list(APPEND APP_INFO_LIST "\tAppInfo{\"${SAMPLE_ID}\", create_${SAMPLE_ID}},")
+    # endif()
 endforeach()
 
 list(JOIN SAMPLE_INCLUDE_FILES "\n" SAMPLE_INCLUDE_FILES)

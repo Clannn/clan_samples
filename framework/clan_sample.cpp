@@ -60,7 +60,7 @@ namespace clan
             return false;
         }
 
-        LOGI("Initializing Vulkan sample");
+        LOGI("Initializing Clan sample");
 
         bool headless = platform.get_window().get_window_mode() == Window::Mode::Headless;
 
@@ -165,18 +165,26 @@ namespace clan
 
         create_device();        // create_custom_device? better way than override?
 
+        LOGI("create     device   down.........................");
+
         if (!device)
         {
             device = std::make_unique<Device>(gpu, surface, std::move(debug_utils), get_device_extensions());
         }
 
         create_render_context(platform);
+        LOGI("create     render context   down.........................");
         prepare_render_context();
+        LOGI("prepare     render context   down.........................");
+
+
 
         stats = std::make_unique<Stats>(*render_context);
+        LOGI("Stats create down......................");
 
         // Start the sample in the first GUI configuration
         configuration.reset();
+        LOGI("configuration reset down....................");
 
         return true;
     }
