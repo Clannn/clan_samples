@@ -15,6 +15,13 @@ namespace clan
 {
     namespace sg
     {
+
+        /**
+         * @param format Vulkan format
+         * @return Whether the vulkan format is ASTC
+         */
+        bool is_astc(VkFormat format);
+        
         /**
          * @brief Mipmap information
          */

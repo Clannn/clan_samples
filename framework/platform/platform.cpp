@@ -37,7 +37,7 @@ namespace clan
         spdlog::set_default_logger(logger);
         LOGI("Logger initialized");
 
-        parser = std::make_unique<CLI11CommandParser>("clan_samples", "\n\tClan Samples\n\n\t\tA collection of samples to demonstrate the Vulkan best practice.\n", arguments);
+        parser = std::make_unique<CLI11CommandParser>("clan_samples", "\n\tClan Samples\n\n\t\tA collection of samples.\n", arguments);
         // Process command line arguments
         if (!parser->parse(associate_plugins(plugins))){
             return ExitCode::Help;

@@ -8,11 +8,46 @@
 #include "common/utils.h"
 #include "platform/filesystem.h"
 #include "scene_graph/components/stb.h"
+#include "scene_graph/components/astc.h"
+#include "scene_graph/components/ktx.h"
 
 namespace clan
 {
     namespace sg
     {
+
+        bool is_astc(const VkFormat format)
+        {
+            return (format == VK_FORMAT_ASTC_4x4_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_4x4_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_5x4_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_5x4_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_5x5_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_5x5_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_6x5_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_6x5_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_6x6_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_6x6_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_8x5_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_8x5_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_8x6_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_8x6_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_8x8_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_8x8_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x5_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x5_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x6_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x6_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x8_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x8_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x10_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_10x10_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_12x10_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_12x10_SRGB_BLOCK ||
+                    format == VK_FORMAT_ASTC_12x12_UNORM_BLOCK ||
+                    format == VK_FORMAT_ASTC_12x12_SRGB_BLOCK);
+        }
+        
         // When the color-space of a loaded image is unknown (from KTX1 for example) we
         // may want to assume that the loaded data is in sRGB format (since it usually is).
         // In those cases, this helper will get called which will force an existing unorm
@@ -292,15 +327,15 @@ namespace clan
             }
             else if (extension == "astc")
             {
-                // image = std::make_unique<Astc>(name, data);
+                image = std::make_unique<Astc>(name, data);
             }
             else if (extension == "ktx")
             {
-                // image = std::make_unique<Ktx>(name, data, content_type);
+                image = std::make_unique<Ktx>(name, data, content_type);
             }
             else if (extension == "ktx2")
             {
-                // image = std::make_unique<Ktx>(name, data, content_type);
+                image = std::make_unique<Ktx>(name, data, content_type);
             }
 
             return image;

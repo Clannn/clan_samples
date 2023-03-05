@@ -5,9 +5,9 @@ get_filename_component(CATEGORY_NAME ${PARENT_DIR} NAME)
 add_sample_with_tags(
     ID ${FOLDER_NAME}
     CATEGORY ${CATEGORY_NAME}
-    AUTHOR "clan"
-    NAME "Hello"
-    DESCRIPTION "Hello Triangle."
+    AUTHOR "Arm"
+    NAME "base"
+    DESCRIPTION "This is a base sample. just render a scene"
     SHADER_FILES_GLSL
-        "triangle.vert"
-        "triangle.frag")
+        "base.vert"
+        "base.frag")

@@ -123,6 +123,8 @@ set(SCENE_GRAPH_COMPONENT_FILES
     ./scene_graph/components/pbr_material.h
     ./scene_graph/components/aabb.h
     ./scene_graph/components/mesh.h
+    ./scene_graph/components/astc.h
+    ./scene_graph/components/ktx.h
 
     # Source Files
     ./scene_graph/components/transform.cpp
@@ -138,6 +140,8 @@ set(SCENE_GRAPH_COMPONENT_FILES
     ./scene_graph/components/pbr_material.cpp
     ./scene_graph/components/aabb.cpp
     ./scene_graph/components/mesh.cpp
+    ./scene_graph/components/astc.cpp
+    ./scene_graph/components/ktx.cpp
 
 )
 

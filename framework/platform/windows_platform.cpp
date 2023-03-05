@@ -96,7 +96,12 @@ namespace clan
         freopen_s(&fp, "conout$", "w", stdout);
         freopen_s(&fp, "conout$", "w", stderr);
 
-        Platform::set_arguments(get_args());
+        auto args = get_args();
+        if (args.size() == 0)
+        {
+            args.insert(args.end(), {"sample", "base"});
+        }
+        Platform::set_arguments(args);
         Platform::set_temp_directory(get_temp_path_from_environment());
     }
 
@@ -108,11 +113,5 @@ namespace clan
     void WindowsPlatform::create_window(const Window::Properties &properties)
     {
         window = std::make_unique<GlfwWindow>(this, properties);
-        // if (properties.mode == vkb::Window::Mode::Headless){
-        //     window = std::make_unique<HeadlessWindow>(properties);
-        // }
-        // else{
-        //     window = std::make_unique<GlfwWindow>(this, properties);
-        // }
     }
 }

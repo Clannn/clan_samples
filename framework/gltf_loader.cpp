@@ -17,6 +17,7 @@
 #include "platform/filesystem.h"
 #include "scene_graph/components/camera.h"
 #include "scene_graph/components/image.h"
+#include "scene_graph/components/astc.h"
 #include "scene_graph/components/light.h"
 #include "scene_graph/components/mesh.h"
 #include "scene_graph/components/pbr_material.h"
@@ -1273,15 +1274,15 @@ namespace clan
         }
 
         // Check whether the format is supported by the GPU
-        // if (sg::is_astc(image->get_format()))
-        // {
-        //     if (!device.is_image_format_supported(image->get_format()))
-        //     {
-        //         LOGW("ASTC not supported: decoding {}", image->get_name());
-        //         image = std::make_unique<sg::Astc>(*image);
-        //         image->generate_mipmaps();
-        //     }
-        // }
+        if (sg::is_astc(image->get_format()))
+        {
+            if (!device.is_image_format_supported(image->get_format()))
+            {
+                LOGW("ASTC not supported: decoding {}", image->get_name());
+                image = std::make_unique<sg::Astc>(*image);
+                image->generate_mipmaps();
+            }
+        }
 
         image->create_vk_image(device);
 
