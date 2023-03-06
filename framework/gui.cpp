@@ -73,7 +73,7 @@ namespace clan
     const ImGuiWindowFlags Gui::info_flags = Gui::common_flags | ImGuiWindowFlags_NoInputs;
 
     Gui::Gui(ClanSample &sample_, const Window &window, const Stats *stats,
-            const float font_size, bool explicit_update) :
+             const float font_size, bool explicit_update) :
         sample{sample_},
         content_scale_factor{window.get_content_scale_factor()},
         dpi_factor{window.get_dpi_factor() * content_scale_factor},
@@ -101,7 +101,6 @@ namespace clan
         style.Colors[ImGuiCol_Button]           = ImVec4(1.0f, 0.0f, 0.0f, 0.4f);
         style.Colors[ImGuiCol_ButtonHovered]    = ImVec4(1.0f, 0.0f, 0.0f, 0.6f);
         style.Colors[ImGuiCol_ButtonActive]     = ImVec4(1.0f, 0.0f, 0.0f, 0.8f);
-        LOGI("create gui context  down......................");
 
         // Borderless window
         style.WindowBorderSize = 0.0f;
@@ -210,7 +209,6 @@ namespace clan
             device.get_fence_pool().reset();
             device.get_command_pool().reset_pool();
         }
-        LOGI("upload vulkan format down...........");
 
         // Create texture sampler
         VkSamplerCreateInfo sampler_info{VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO};
@@ -983,7 +981,7 @@ namespace clan
         ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0);
         ImGui::SetNextWindowPos(ImVec2(10, 10));
         ImGui::SetNextWindowSize(ImVec2(0, 0), ImGuiSetCond_FirstUseEver);
-        ImGui::Begin("Vulkan Example", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
+        ImGui::Begin("Clan Example", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
         ImGui::TextUnformatted(name.c_str());
         ImGui::TextUnformatted(std::string(sample.get_render_context().get_device().get_gpu().get_properties().deviceName).c_str());
         ImGui::Text("%.2f ms/frame (%.1d fps)", (1000.0f / last_fps), last_fps);

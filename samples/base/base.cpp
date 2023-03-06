@@ -28,7 +28,12 @@ bool BaseSample::prepare(clan::Platform &platform)
 
 	set_render_pipeline(std::move(render_pipeline));
 
-	gui = std::make_unique<clan::Gui>(*this, platform.get_window());
+    clan::CounterSamplingConfig config;
+    config.mode = clan::CounterSamplingMode::Continuous;
+
+	stats->request_stats({clan::StatIndex::frame_times,}, config);
+
+	gui = std::make_unique<clan::Gui>(*this, platform.get_window(), stats.get());
 
 	return true;
 }

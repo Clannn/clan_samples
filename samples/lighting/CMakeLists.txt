@@ -6,8 +6,12 @@ add_sample_with_tags(
     ID ${FOLDER_NAME}
     CATEGORY ${CATEGORY_NAME}
     AUTHOR "clan"
-    NAME "base"
-    DESCRIPTION "This is a base sample. just render a scene"
+    NAME "lighting"
+    DESCRIPTION "Using multiple queues to async compute lighting."
     SHADER_FILES_GLSL
-        "base.vert"
-        "base.frag")
+        "lighting/forward.vert"
+        "lighting/forward.frag"
+        "lighting/shadow.vert"
+        "lighting/shadow.frag"
+        "lighting/composite.vert"
+        "lighting/composite.frag")

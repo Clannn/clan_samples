@@ -138,7 +138,7 @@ namespace clan
     #if defined(VKB_DEBUG) || defined(VKB_VALIDATION_LAYERS)
         // Check if VK_EXT_debug_utils is supported, which supersedes VK_EXT_Debug_Report
         const bool has_debug_utils  = enable_extension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME,
-                                                    available_instance_extensions, enabled_extensions);
+                                                       available_instance_extensions, enabled_extensions);
         bool       has_debug_report = false;
 
         if (!has_debug_utils)

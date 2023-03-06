@@ -118,6 +118,7 @@ set(SCENE_GRAPH_COMPONENT_FILES
     ./scene_graph/components/material.h
     ./scene_graph/components/camera.h
     ./scene_graph/components/perspective_camera.h
+    ./scene_graph/components/orthographic_camera.h
     ./scene_graph/components/image.h
     ./scene_graph/components/stb.h
     ./scene_graph/components/pbr_material.h
@@ -135,6 +136,7 @@ set(SCENE_GRAPH_COMPONENT_FILES
     ./scene_graph/components/material.cpp
     ./scene_graph/components/camera.cpp
     ./scene_graph/components/perspective_camera.cpp
+    ./scene_graph/components/orthographic_camera.cpp
     ./scene_graph/components/image.cpp
     ./scene_graph/components/stb.cpp
     ./scene_graph/components/pbr_material.cpp

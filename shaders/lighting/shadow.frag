@@ -1,5 +1,5 @@
 #version 320 es
-/* Copyright (c) 2019, Arm Limited and Contributors
+/* Copyright (c) 2021, Arm Limited and Contributors
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -16,13 +16,6 @@
  * limitations under the License.
  */
 
-precision mediump float;
-
-layout(location = 0) in vec3 in_color;
-
-layout(location = 0) out vec4 out_color;
-
 void main()
 {
-	out_color = vec4(in_color, 1.0);
 }

@@ -12,40 +12,40 @@ namespace clan
 {
     namespace sg
     {
-/**
- * @brief Generic structure to receive platform events.
- *        Used for adding game logic to scene graph objects.
- */
-class Script : public Component
-{
-public:
-	Script(const std::string &name = "");
+		/**
+		 * @brief Generic structure to receive platform events.
+		 *        Used for adding game logic to scene graph objects.
+		 */
+		class Script : public Component
+		{
+		public:
+			Script(const std::string &name = "");
 
-	virtual ~Script() = default;
+			virtual ~Script() = default;
 
-	virtual std::type_index get_type() override;
+			virtual std::type_index get_type() override;
 
-	/**
-	 * @brief Main loop script events
-	 */
-	virtual void update(float delta_time) = 0;
+			/**
+			 * @brief Main loop script events
+			 */
+			virtual void update(float delta_time) = 0;
 
-	virtual void input_event(const InputEvent &input_event);
+			virtual void input_event(const InputEvent &input_event);
 
-	virtual void resize(uint32_t width, uint32_t height);
-};
+			virtual void resize(uint32_t width, uint32_t height);
+		};
 
-class NodeScript : public Script
-{
-  public:
-	NodeScript(Node &node, const std::string &name = "");
+		class NodeScript : public Script
+		{
+		public:
+			NodeScript(Node &node, const std::string &name = "");
 
-	virtual ~NodeScript() = default;
+			virtual ~NodeScript() = default;
 
-	Node &get_node();
+			Node &get_node();
 
-  private:
-	Node &node;
-};
+		private:
+			Node &node;
+		};
     }
 }

@@ -37,10 +37,10 @@ namespace clan
          * @throws runtime_error if the required extensions and validation layers are not found
          */
         Instance(const std::string &                           application_name,
-                const std::unordered_map<const char *, bool> &required_extensions        = {},
-                const std::vector<const char *> &             required_validation_layers = {},
-                bool                                          headless                   = false,
-                uint32_t                                      api_version                = VK_API_VERSION_1_0);
+                 const std::unordered_map<const char *, bool> &required_extensions        = {},
+                 const std::vector<const char *> &             required_validation_layers = {},
+                 bool                                          headless                   = false,
+                 uint32_t                                      api_version                = VK_API_VERSION_1_0);
 
         /**
          * @brief Queries the GPUs of a VkInstance that is already created

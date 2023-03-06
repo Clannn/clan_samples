@@ -33,6 +33,7 @@ add_sub_dirs(${CMAKE_CURRENT_SOURCE_DIR})
 # Order of the sample ids
 set(ORDER_LIST
     "base"
+    "lighting"
 )
 
 # Orders the sample ids by the order list above
