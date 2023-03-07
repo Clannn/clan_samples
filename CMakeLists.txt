@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(clan_samples)
+project(clan_samples LANGUAGES C CXX)
 
 # Add path for local cmake scripts
 list(APPEND CMAKE_MODULE_PATH
-    ${CMAKE_CURRENT_SOURCE_DIR}/bldsys/cmake
-    ${CMAKE_CURRENT_SOURCE_DIR}/bldsys/cmake/module)
+    ${CMAKE_CURRENT_SOURCE_DIR}/bldsys/cmake)
 
 include(utils)
 include(global_options)

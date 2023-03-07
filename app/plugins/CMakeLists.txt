@@ -40,11 +40,6 @@ foreach(DIR IN LISTS PLUGINS_FILES)
     endif()
 endforeach()
 
-# filter compiled plugins
-if(NOT ${VKB_BUILD_TESTS})
-    list(REMOVE_ITEM PLUGINS "start_test")
-endif()
-
 # Generate plugins.cpp
 
 set(PLUGIN_INCLUDE_FILES)

@@ -100,7 +100,6 @@ private:
 		clan::PipelineLayout *       layout{nullptr};
 	};
 
-    clan::RenderTarget &get_current_forward_render_target();
 };
 
 std::unique_ptr<clan::ClanSample> create_lighting();

@@ -48,18 +48,12 @@ set(COMMON_FILES
     ./common/vk_common.h
     ./common/resource_caching.h
     ./common/utils.h
+
     #sources files
     ./common/error.cpp
     ./common/vk_common.cpp
     ./common/strings.cpp
     ./common/utils.cpp
-
-)
-
-set(GEOMETRY_FILES
-    # Header Files
-
-    # Source Files
 
 )
 
@@ -83,13 +77,6 @@ set(RENDERING_FILES
     ./rendering/render_pipeline.cpp
     ./rendering/subpasses/forward_subpass.cpp
     ./rendering/subpasses/geometry_subpass.cpp
-    
-)
-
-set(RENDERING_SUBPASSES_FILES
-    # Header Files
-
-    # Source Files
     
 )
 
@@ -259,52 +246,17 @@ set(PLATFORM_FILES
 
 )
 
-set(GLFW_FILES
-    # Header Files
-
-    # Source Files
-    
-)
-
-set(PARSER_FILES
-    # Header Files
-
-    # Source Files
-    
-)
-
-set(GRAPHING_FILES
-    # Header Files
-
-    # Source Files
-    
-)
-
-set(WINDOWS_FILES
-    # Header Files
-
-    # Source Files
-    
-)
-
-# TODO: source_group
 
 set(PROJECT_FILES
     ${PLATFORM_FILES}
-    ${PARSER_FILES}
     ${COMMON_FILES}
     ${FRAMEWORK_FILES}
     ${CORE_FILES}
-    ${GEOMETRY_FILES}
     ${RENDERING_FILES}
-    ${RENDERING_SUBPASSES_FILES}
     ${SCENE_GRAPH_FILES}
     ${SCENE_GRAPH_COMPONENT_FILES}
     ${SCENE_GRAPH_SCRIPTS_FILES}
     ${STATS_FILES}
-    ${GRAPHING_FILES}
-    ${GLFW_FILES}
-    ${WINDOWS_FILES}
 )
 
 # mask out the min/max macros from minwindef.h
@@ -319,18 +271,6 @@ endif()
 if(${VKB_VALIDATION_LAYERS})
     target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_VALIDATION_LAYERS)
 endif()
-# target_compile_options(${PROJECT_NAME} PUBLIC /MP)
-
-# message(STATUS "Warnings as Errors Enabled")
-# target_compile_options(${PROJECT_NAME} PRIVATE /W3 /WX)
-
-# target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_VALIDATION_LAYERS_GPU_ASSISTED)
-# target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_VULKAN_DEBUG)
-
-# if(${VKB_ENABLE_PORTABILITY})
-#     message(STATUS "Vulkan Portability extension is enabled")
-#     target_compile_definitions(${PROJECT_NAME} PUBLIC VKB_ENABLE_PORTABILITY)
-# endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC $<TARGET_PROPERTY:plugins,INCLUDE_DIRECTORIES> ${CMAKE_CURRENT_SOURCE_DIR})
 

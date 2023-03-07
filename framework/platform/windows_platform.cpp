@@ -97,7 +97,7 @@ namespace clan
         freopen_s(&fp, "conout$", "w", stderr);
 
         auto args = get_args();
-        if (args.size() == 0)
+        if (args.size() <= 1)
         {
             args.insert(args.end(), {"sample", "base"});
         }
