@@ -18,7 +18,7 @@ To build the project:
 git clone https://github.com/Clannn/clan_samples.git
 cd clan_samples
 cmake . -Bbuild
-cmake --build build
+cmake --build build --config Release
 ./clan_samples.exe
 ```
 
